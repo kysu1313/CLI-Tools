@@ -3,7 +3,7 @@
 # Arguments:
 # $1 = source branch (branch to merge from)
 # $2 = target branch (branch to merge into)
-# $3 = optional folder pattern (default apexportal.upp.*)
+# $3 = optional folder pattern in quotes (default apexportal.upp.*)
 
 SRC_BRANCH="${1:?Source branch required}"
 TGT_BRANCH="${2:?Target branch required}"
@@ -14,7 +14,7 @@ CONFLICTS_FILE="$TMPDIR/conflicts.txt"
 
 echo "Source branch (to merge from): $SRC_BRANCH"
 echo "Target branch (to merge into): $TGT_BRANCH"
-echo "Folder pattern: $PATTERN"
+echo "Folder pattern: \"$PATTERN\""
 echo
 
 update_and_merge() {
