@@ -43,7 +43,7 @@ update_and_merge() {
     git push origin "$TGT_BRANCH" --quiet
     echo "✅ Merged $SRC_BRANCH into $TGT_BRANCH and pushed."
   else
-    git merge --abort --quiet
+    git merge --abort
     echo "⚠️ Conflicts detected in $dir, manual resolution required."
     echo "$dir" >> "$CONFLICTS_FILE"
   fi
